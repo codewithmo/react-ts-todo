@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { initialTodos } from "./initialTodos";
 import { TodoList } from "./components/TodoList";
 import { AddTodoForm } from "./components/AddTodoForm";
+import { MyGrid } from "./components";
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Array<Todo>>(initialTodos);
@@ -22,10 +23,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <MyGrid>
       <TodoList todos={todos} toggleComplete={toggleComplete} />
       <AddTodoForm addTodo={addTodo} />
-    </div>
+    </MyGrid>
   );
 };
 

@@ -1,4 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import { ButtonBase } from "./SC-ButtonBase";
+import { InputField } from "./SC-InputField";
 // import { AddTodo } from "./types";
 
 interface AddTodoFormProps {
@@ -20,10 +22,10 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
 
   return (
     <form>
-      <input type="text" placeholder="Type todo here" value={newTodo} onChange={handleChange} />
-      <button type="submit" onClick={handleSubmit}>
+      <InputField type="text" placeholder="Type todo here" value={newTodo} onChange={handleChange} />
+      <ButtonBase type="submit" onClick={handleSubmit}>
         Add Todo
-      </button>
+      </ButtonBase>
     </form>
   );
 };
